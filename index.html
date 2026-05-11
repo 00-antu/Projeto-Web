@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylesheet | Sistema de Controle de Estoque</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <!--MENU-->
+    <header>
+        <h1>stylesheet</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pages/estoque.html">Estoque</a></li>
+                <li><a href="pages/catalogo.html">Catálogo</a></li>
+                <li><a href="pages/cadastro.html">Cadastro</a></li>
+                <li><a href="pages/localizacao.html">Localização</a></li>
+                <li><a href="pages/promocao.html">Promoções</a></li>
+                <li><a href="pages/calculo.html">Cálculo</a></li>
+                <li><a href="pages/sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--CARROSSEL-->
+    <section class="carrossel">
+        <div class="slide ativo">
+            <img src="images/img6.png" alt="Roupa feminina em destaque">
+        </div>
+        <div class="slide">
+            <img src="images/img2.jpg" alt="Arara de roupas organizadas">
+            <h2>Cadastre suas peças</h2>
+            <p>Registre roupas, tamanhos, preços e categorias de forma prática.</p>
+        </div>
+        <div class="slide">
+            <img src="images/img3.jpg" alt="Loja de roupas moderna">
+            <h2>Evite falta de produtos</h2>
+            <p>Acompanhe seu estoque e saiba quando precisa repor mercadorias.</p>
+        </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="funcionalidades">
+        <h2>Funcionalidades</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Controle de Estoque</h3>
+                <p>Visualize quantidades, preços e produtos disponíveis.</p>
+            </div>
+
+            <div class="card">
+                <h3>Catálogo</h3>
+                <p>Veja os produtos em formato visual organizado.</p>
+            </div>
+
+            <div class="card">
+                <h3>Cadastro</h3>
+                <p>Cadastre novas peças de roupas no sistema.</p>
+            </div>
+        </div>
+    </section>
+ <!-- SOBRE O SISTEMA -->
+    <section class="sobre-box">
+        <h2>Sobre o sistema</h2>
+        <p>
+            O FashionStock é um sistema desenvolvido para auxiliar lojas de roupas no controle de estoque,
+            organização de produtos e gestão de vendas. Com ele, é possível visualizar produtos,
+            cadastrar novas peças e acompanhar o fluxo do estoque de forma simples e eficiente.
+        </p>
+    </section>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+        <p>© 2026 - Projeto Acadêmico | FashionStock</p>
+    </footer>
+
+    <!-- FUNÇÃO DO CARROSSEL -->
+    <script>
+        let slideAtual = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function mostrarSlide() {
+            slides.forEach(function (slide) {
+                slide.classList.remove("ativo");
+            });
+
+            slideAtual++;
+
+            if (slideAtual >= slides.length) {
+                slideAtual = 0;
+            }
+
+            slides[slideAtual].classList.add("ativo");
+        }
+
+        setInterval(mostrarSlide, 3000);
+    </script>
+
+</body>
+
+</html>
